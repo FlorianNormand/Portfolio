@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <title>Catalogue des séjours</title>
+    <link rel="stylesheet" type="text/css" href="style_catalogue.css" />
+    <meta name="" content="" />
+    <meta name="keywords" content="" lang="fr" />
+    <meta name="keywords" content="" lang="en" />
+    <meta name="author" content="" />
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" type="image/png" href="../imgs/favicon.png"/>
+</head>
+
+<body>
+    <header>
+        <!-- Logo de Sport Koh, lien vers l'accueil  -->
+        <a href="../accueil/accueil.html">
+            <svg id="logo" width="580" height="351" viewBox="0 0 580 351" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0H580V351H0V0Z" />
+                <path d="M290 117H504V193H290V117Z" fill="#F5F5F5" />
+                <path
+                    d="M316.85 250C315.917 250 315.167 249.617 314.6 248.85L303.721 234.5L308.5 229.945L319.55 244.8C320.017 245.433 320.25 246.117 320.25 246.85C320.25 247.783 319.9 248.55 319.2 249.15C318.5 249.717 317.717 250 316.85 250ZM317.45 214.75C318.25 214.75 318.9 215.083 319.4 215.75C319.933 216.383 320.2 217.033 320.2 217.7C320.2 218.4 319.9 219.05 319.3 219.65L299 239V231.5L315 215.9C315.767 215.133 316.583 214.75 317.45 214.75ZM295.85 250C294.917 250 294.167 249.717 293.6 249.15C293.033 248.55 292.75 247.817 292.75 246.95V218.05C292.75 217.183 293.05 216.467 293.65 215.9C294.25 215.3 295.017 215 295.95 215C296.883 215 297.617 215.3 298.15 215.9C298.717 216.467 299 217.183 299 218.05V246.95C299 247.817 298.717 248.55 298.15 249.15C297.583 249.717 296.817 250 295.85 250Z"
+                    fill="#F5F5F5" />
+                <path
+                    d="M356.2 232.5C356.2 235 355.783 237.333 354.95 239.5C354.117 241.667 352.933 243.583 351.4 245.25C349.9 246.883 348.1 248.167 346 249.1C343.933 250.033 341.667 250.5 339.2 250.5C336.733 250.5 334.467 250.033 332.4 249.1C330.333 248.167 328.533 246.883 327 245.25C325.5 243.583 324.333 241.667 323.5 239.5C322.667 237.333 322.25 235 322.25 232.5C322.25 230 322.667 227.667 323.5 225.5C324.333 223.333 325.5 221.433 327 219.8C328.533 218.133 330.333 216.833 332.4 215.9C334.467 214.967 336.733 214.5 339.2 214.5C341.667 214.5 343.933 214.967 346 215.9C348.1 216.833 349.9 218.133 351.4 219.8C352.933 221.433 354.117 223.333 354.95 225.5C355.783 227.667 356.2 230 356.2 232.5ZM349.7 232.5C349.7 230.267 349.25 228.25 348.35 226.45C347.45 224.617 346.217 223.167 344.65 222.1C343.083 221.033 341.267 220.5 339.2 220.5C337.133 220.5 335.317 221.033 333.75 222.1C332.183 223.167 330.95 224.6 330.05 226.4C329.183 228.2 328.75 230.233 328.75 232.5C328.75 234.733 329.183 236.767 330.05 238.6C330.95 240.4 332.183 241.833 333.75 242.9C335.317 243.967 337.133 244.5 339.2 244.5C341.267 244.5 343.083 243.967 344.65 242.9C346.217 241.833 347.45 240.4 348.35 238.6C349.25 236.767 349.7 234.733 349.7 232.5Z"
+                    fill="#F5F5F5" />
+                <path
+                    d="M365.139 215C365.939 215 366.639 215.3 367.239 215.9C367.873 216.467 368.189 217.183 368.189 218.05V246.95C368.189 247.817 367.873 248.55 367.239 249.15C366.606 249.717 365.873 250 365.039 250C364.106 250 363.356 249.717 362.789 249.15C362.223 248.55 361.939 247.817 361.939 246.95V218.05C361.939 217.183 362.239 216.467 362.839 215.9C363.439 215.3 364.206 215 365.139 215ZM387.289 215C388.223 215 388.973 215.3 389.539 215.9C390.106 216.467 390.389 217.183 390.389 218.05V246.95C390.389 247.817 390.089 248.55 389.489 249.15C388.923 249.717 388.156 250 387.189 250C386.389 250 385.673 249.717 385.039 249.15C384.439 248.55 384.139 247.817 384.139 246.95V218.05C384.139 217.183 384.456 216.467 385.089 215.9C385.723 215.3 386.456 215 387.289 215ZM368.189 229.55H384.139V235.3H368.189V229.55Z"
+                    fill="#F5F5F5" />
+                <path
+                    d="M316 176.6C313.2 176.6 310.68 176.26 308.44 175.58C306.2 174.86 304.06 173.62 302.02 171.86C301.5 171.42 301.1 170.92 300.82 170.36C300.54 169.8 300.4 169.24 300.4 168.68C300.4 167.76 300.72 166.96 301.36 166.28C302.04 165.56 302.88 165.2 303.88 165.2C304.64 165.2 305.32 165.44 305.92 165.92C307.44 167.16 308.94 168.1 310.42 168.74C311.94 169.38 313.8 169.7 316 169.7C317.48 169.7 318.84 169.48 320.08 169.04C321.32 168.56 322.32 167.94 323.08 167.18C323.84 166.38 324.22 165.48 324.22 164.48C324.22 163.28 323.86 162.26 323.14 161.42C322.42 160.58 321.32 159.88 319.84 159.32C318.36 158.72 316.48 158.26 314.2 157.94C312.04 157.62 310.14 157.14 308.5 156.5C306.86 155.82 305.48 154.98 304.36 153.98C303.28 152.94 302.46 151.74 301.9 150.38C301.34 148.98 301.06 147.42 301.06 145.7C301.06 143.1 301.72 140.88 303.04 139.04C304.4 137.2 306.22 135.8 308.5 134.84C310.78 133.88 313.3 133.4 316.06 133.4C318.66 133.4 321.06 133.8 323.26 134.6C325.5 135.36 327.32 136.34 328.72 137.54C329.88 138.46 330.46 139.52 330.46 140.72C330.46 141.6 330.12 142.4 329.44 143.12C328.76 143.84 327.96 144.2 327.04 144.2C326.44 144.2 325.9 144.02 325.42 143.66C324.78 143.1 323.92 142.58 322.84 142.1C321.76 141.58 320.62 141.16 319.42 140.84C318.22 140.48 317.1 140.3 316.06 140.3C314.34 140.3 312.88 140.52 311.68 140.96C310.52 141.4 309.64 142 309.04 142.76C308.44 143.52 308.14 144.4 308.14 145.4C308.14 146.6 308.48 147.6 309.16 148.4C309.88 149.16 310.9 149.78 312.22 150.26C313.54 150.7 315.12 151.1 316.96 151.46C319.36 151.9 321.46 152.42 323.26 153.02C325.1 153.62 326.62 154.4 327.82 155.36C329.02 156.28 329.92 157.46 330.52 158.9C331.12 160.3 331.42 162.02 331.42 164.06C331.42 166.66 330.7 168.9 329.26 170.78C327.82 172.66 325.92 174.1 323.56 175.1C321.24 176.1 318.72 176.6 316 176.6Z"
+                    fill="#3D9660" />
+                <path
+                    d="M355.641 134C357.721 134 359.661 134.6 361.461 135.8C363.301 137 364.781 138.62 365.901 140.66C367.021 142.7 367.581 144.98 367.581 147.5C367.581 149.98 367.021 152.24 365.901 154.28C364.781 156.32 363.301 157.96 361.461 159.2C359.661 160.4 357.721 161 355.641 161H344.601L345.201 159.92V172.34C345.201 173.38 344.881 174.26 344.241 174.98C343.601 175.66 342.761 176 341.721 176C340.721 176 339.901 175.66 339.261 174.98C338.621 174.26 338.301 173.38 338.301 172.34V137.66C338.301 136.62 338.641 135.76 339.321 135.08C340.041 134.36 340.921 134 341.961 134H355.641ZM355.641 154.16C356.401 154.16 357.141 153.84 357.861 153.2C358.581 152.56 359.181 151.74 359.661 150.74C360.141 149.7 360.381 148.62 360.381 147.5C360.381 146.34 360.141 145.26 359.661 144.26C359.181 143.26 358.581 142.46 357.861 141.86C357.141 141.22 356.401 140.9 355.641 140.9H344.481L345.201 139.82V155.12L344.541 154.16H355.641Z"
+                    fill="#3D9660" />
+                <path
+                    d="M413.093 155C413.093 158 412.593 160.8 411.593 163.4C410.593 166 409.173 168.3 407.333 170.3C405.533 172.26 403.373 173.8 400.853 174.92C398.373 176.04 395.653 176.6 392.693 176.6C389.733 176.6 387.013 176.04 384.533 174.92C382.053 173.8 379.893 172.26 378.053 170.3C376.253 168.3 374.853 166 373.853 163.4C372.853 160.8 372.353 158 372.353 155C372.353 152 372.853 149.2 373.853 146.6C374.853 144 376.253 141.72 378.053 139.76C379.893 137.76 382.053 136.2 384.533 135.08C387.013 133.96 389.733 133.4 392.693 133.4C395.653 133.4 398.373 133.96 400.853 135.08C403.373 136.2 405.533 137.76 407.333 139.76C409.173 141.72 410.593 144 411.593 146.6C412.593 149.2 413.093 152 413.093 155ZM405.293 155C405.293 152.32 404.753 149.9 403.673 147.74C402.593 145.54 401.113 143.8 399.233 142.52C397.353 141.24 395.173 140.6 392.693 140.6C390.213 140.6 388.033 141.24 386.153 142.52C384.273 143.8 382.793 145.52 381.713 147.68C380.673 149.84 380.153 152.28 380.153 155C380.153 157.68 380.673 160.12 381.713 162.32C382.793 164.48 384.273 166.2 386.153 167.48C388.033 168.76 390.213 169.4 392.693 169.4C395.173 169.4 397.353 168.76 399.233 167.48C401.113 166.2 402.593 164.48 403.673 162.32C404.753 160.12 405.293 157.68 405.293 155Z"
+                    fill="#3D9660" />
+                <path
+                    d="M424.3 176C423.18 176 422.18 175.66 421.3 174.98C420.42 174.26 419.98 173.38 419.98 172.34V137.66C419.98 136.62 420.32 135.76 421 135.08C421.72 134.36 422.6 134 423.64 134H440.92C443 134 444.94 134.56 446.74 135.68C448.58 136.76 450.06 138.28 451.18 140.24C452.3 142.16 452.86 144.38 452.86 146.9C452.86 148.42 452.54 149.9 451.9 151.34C451.3 152.78 450.46 154.08 449.38 155.24C448.34 156.4 447.16 157.3 445.84 157.94L445.9 156.56C447.02 157.16 447.94 157.88 448.66 158.72C449.42 159.52 450 160.4 450.4 161.36C450.84 162.28 451.1 163.28 451.18 164.36C451.34 165.36 451.44 166.24 451.48 167C451.56 167.76 451.68 168.4 451.84 168.92C452.04 169.44 452.4 169.84 452.92 170.12C453.8 170.64 454.34 171.4 454.54 172.4C454.78 173.36 454.56 174.22 453.88 174.98C453.44 175.5 452.88 175.84 452.2 176C451.52 176.12 450.84 176.12 450.16 176C449.48 175.84 448.92 175.64 448.48 175.4C447.8 175 447.12 174.42 446.44 173.66C445.76 172.86 445.2 171.8 444.76 170.48C444.36 169.16 444.16 167.46 444.16 165.38C444.16 164.7 444.04 164.08 443.8 163.52C443.56 162.92 443.22 162.42 442.78 162.02C442.34 161.58 441.78 161.26 441.1 161.06C440.42 160.82 439.62 160.7 438.7 160.7H426.58L427.48 159.32V172.34C427.48 173.38 427.2 174.26 426.64 174.98C426.08 175.66 425.3 176 424.3 176ZM426.64 154.52H440.62C441.34 154.52 442.04 154.2 442.72 153.56C443.4 152.88 443.96 151.98 444.4 150.86C444.84 149.7 445.06 148.44 445.06 147.08C445.06 145.32 444.58 143.86 443.62 142.7C442.7 141.5 441.7 140.9 440.62 140.9H426.76L427.48 138.98V155.96L426.64 154.52Z"
+                    fill="#3D9660" />
+                <path
+                    d="M474.513 176C473.393 176 472.473 175.66 471.753 174.98C471.033 174.26 470.673 173.38 470.673 172.34V140.9H478.473V172.34C478.473 173.38 478.093 174.26 477.333 174.98C476.613 175.66 475.673 176 474.513 176ZM461.253 140.9C460.213 140.9 459.333 140.58 458.613 139.94C457.933 139.3 457.593 138.46 457.593 137.42C457.593 136.38 457.933 135.56 458.613 134.96C459.333 134.32 460.213 134 461.253 134H487.893C488.933 134 489.793 134.32 490.473 134.96C491.193 135.6 491.553 136.44 491.553 137.48C491.553 138.52 491.193 139.36 490.473 140C489.793 140.6 488.933 140.9 487.893 140.9H461.253Z"
+                    fill="#3D9660" />
+                <path d="M274.88 76H76V275H274.88V76Z" />
+                <path d="M274.88 238H76V252H274.88V238Z" fill="#F5F5F5" />
+                <path d="M274.88 260H76V275H274.88V260Z" fill="#F5F5F5" />
+                <path
+                    d="M103.244 200.24C103.244 200.24 108.231 198.23 116.016 196.68C118.415 196.2 121.083 195.77 123.951 195.45C133.785 194.37 145.978 194.67 157.871 199.3L180.617 229.24L180.757 229.42H79.0982L103.244 200.24Z"
+                    fill="#F5F5F5" />
+                <path
+                    d="M190.571 228.69L189.412 227.18L148.456 173.66L164.726 153.14C164.726 153.14 193.259 142.88 219.214 153.14L275 228.69"
+                    fill="#F5F5F5" />
+                <path
+                    d="M150.285 190.83C150.285 190.83 131.537 186.27 112.478 190.61C112.178 190.68 111.858 190.75 111.559 190.83L130.937 164.47L150.285 190.83Z"
+                    fill="#F5F5F5" />
+                <path d="M209.849 142.83C209.849 142.83 194.589 139.06 177.979 142.83L194.589 123.06L209.849 142.83Z"
+                    fill="#F5F5F5" />
+                <path
+                    d="M238.872 156.95C238.872 159.76 238.692 162.53 238.362 165.24L195.508 108L143.839 167.3L130.917 152.45L113.707 173.75C112.298 168.39 111.549 162.76 111.549 156.95C111.549 121.08 140.051 92 175.21 92C210.369 92 238.872 121.08 238.872 156.95Z"
+                    fill="#F5F5F5" />
+            </svg>
+        </a>
+        <a href="#menu">
+            <svg id="burger" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="34px" height="27px" viewBox="0 0 34 27" enable-background="new 0 0 34 27"
+                xml:space="preserve">
+                <rect fill="#FFFFFF" width="34" height="4" />
+                <rect y="11" fill="#FFFFFF" width="34" height="4" />
+                <rect y="23" fill="#FFFFFF" width="34" height="4" />
+            </svg>
+        </a>
+        <nav class="menu">
+            <ul>
+                <li ><a href="../catalogue_sejour/catalogue.html">Par séjour</a></li>
+                <li id="nav2"><a href="#">Par localisation</a></li>
+                <li><a href="#">L'association</a></li>
+            </ul>   
+        </nav>
+    </header>
+    <!--  Contenu de la page  -->
+    <main>
+        <h1>Catalogue des séjours disponibles</h1>
+
+        <section>
+            <div><!-- permet de séparer chaques lignes de séjours-->
+                <h2>Séjour à la montagne :</h2>            
+                <div class="ligneCarte"> <!--  definition id ligneCarte pour la ligne des sejours sous forme de "carte"  -->
+                    <article class="carte">
+                        <img src="../imgs/imgs_catalogue/montagne.png" alt="Montagne" title="Montagne">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere purus in interdum elementum</p>
+                        <a href="#" id="lienAcces">Accès</a>
+                    </article>
+                    <article class="carte">
+                        <img src="../imgs/imgs_catalogue/montagne.png" alt="Montagne" title="Montagne">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere purus in interdum elementum</p>
+                        <a href="#" id="lienAcces">Accès</a>
+                    </article>
+                    <article class="carte">
+                        <img src="../imgs/imgs_catalogue/montagne.png" alt="Montagne" title="Montagne">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere purus in interdum elementum</p>
+                        <a href="#" id="lienAcces">Accès</a>
+                    </article>
+                </div>
+            </div> 
+
+            <div>
+                <h2>Séjour à la mer :</h2>
+                <div class="ligneCarte">
+                    <article class="carte">
+                        <img src="../imgs/imgs_catalogue/plage.png" alt="Plage" title="Plage">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere purus in interdum elementum</p>
+                        <a href="#" id="lienAcces">Accès</a>
+                    </article>
+                    <article class="carte">
+                        <img src="../imgs/imgs_catalogue/plage.png" alt="Plage" title="Plage">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere purus in interdum elementum</p>
+                        <a href="#" id="lienAcces">Accès</a>
+                    </article>
+                    <article class="carte">
+                        <img src="../imgs/imgs_catalogue/plage.png" alt="Plage" title="Plage">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere purus in interdum elementum</p>
+                        <a href="#" id="lienAcces">Accès</a>
+                    </article>
+                </div>
+            </div>
+
+            <div>
+                <h2>Séjour à l'étranger :</h2>
+                <div class="ligneCarte">
+                    <article class="carte">
+                        <img src="../imgs/imgs_catalogue/grece.png" alt="Grèce" title="Grèce">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere purus in interdum elementum</p>
+                        <a href="#" id="lienAcces">Accès</a>
+                    </article>
+                    <article class="carte">
+                        <img src="../imgs/imgs_catalogue/grece.png" alt="Grèce" title="Grèce">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere purus in interdum elementum</p>
+                        <a href="#" id="lienAcces">Accès</a>
+                    </article>
+                    <article class="carte">
+                        <img src="../imgs/imgs_catalogue/grece.png" alt="Grèce" title="Grèce">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc posuere purus in interdum elementum</p>
+                        <a href="#" id="lienAcces">Accès</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Pied de page -->
+    <footer>
+        <div>
+            <!-- Lien la page de présentation de l'association -->
+            <a href="association.html" id="lienAsso">Qui sommes nous ?</a>
+            <!-- Lien vers les contacts et réseaux de l'association -->
+            <div id="reseaux">
+                <a href="https://www.facebook.com/" target="_blank"><img src="../imgs/imgs_footer/Facebook.png"
+                        alt="Logo Facebook"></a>
+                <a href="https://www.instagram.com/" target="_blank"><img src="../imgs/imgs_footer/Instagram.png"
+                        alt="Logo Instagram"></a>
+                <a href="https://twitter.com/" target="_blank"><img src="../imgs/imgs_footer/Twitter.png"
+                        alt="Logo Twitter"></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank"><img
+                        src="../imgs/imgs_footer/YouTube.png" alt="Logo Youtube"></a>
+                <a href="mailto:sportkoh@gmail.com" target="_blank"><img src="../imgs/imgs_footer/Enveloppe.png"
+                        alt="Logo Mail"></a>
+            </div>
+        </div>
+        <!-- Lien vers une page regroupant des photos de voyages -->
+        <div id="galeriefooter">
+            <a href="#">
+                <p>Galerie Photo</p>
+            </a>
+        </div>
+    </footer>
+</body>
+<!-- Script en javascript du menu burger (pour le format télephone, voir CSS)-->
+    <script>
+        /* La constante burger représente l'icone de menu burger */
+        const burger = document.querySelector("#burger")
+        /* La constance menu représente la liste de choix de page du menu */
+        const menu = document.querySelector(".menu")
+        /* La constance body représente le corps de page */
+        const body = document.querySelector("body")
+     
+        /* On programme un évènement qui s'active lorsque l'utilisateur clique sur le menu burger*/
+        burger.addEventListener('click',()=>{
+            /* La classe 'affichage' est ajoutée ou supprimée au clic sur le menu burger
+            Cela permet d'afficher le menu */
+            menu.classList.toggle('affichage')
+            /* La classe 'stopScroll' est ajoutée ou supprimée au clic sur le menu burger 
+            Cela permet d'empecher le défilement de la page lorsque le menu est affiché */
+            body.classList.toggle('stopScroll')
+        })
+    </script> 
+</html>

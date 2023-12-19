@@ -1,0 +1,427 @@
+/* Importation de la police Quicksand */
+@font-face {
+    font-family: 'Quicksand';
+    src: url('../fonts/quicksand-regular-webfont.woff2') format('woff2'),
+         url('../fonts/quicksand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* supprimer les marges intérieures et extérieures qui existent par défaut sur certaines navigateurs */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Style global de la page */
+body{
+    font-family: 'Quicksand', 'Liberation Sans';
+    font-size: 1em;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+    margin-top: 40px;
+    background-color:#3d9660;
+    color: #F5F5F5;
+    text-align: center;
+    border-radius: 30px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+
+/* Définition du style de l'entête */
+#logo{
+    height: 100px;
+    width: 15em;
+    float: left;
+    transition: all 0.5s;
+}
+
+#logo:hover{
+    background: #34BE63;
+} 
+
+header{
+    background-color: #3d9660;
+    height: 100px; 
+}
+
+header ul{
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+}
+
+header ul li{
+    list-style-type: none;
+    flex-basis: 250px;
+    text-align: center;
+    background-color: #34BE63;
+    font-size: 1.5em;
+    height: 100px;
+    line-height: 100px;
+}
+
+header ul a{
+    color: #F5F5F5;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+
+}
+
+#nav2{
+    background-color: #3d9660;
+    white-space: nowrap;
+}
+
+header ul a:hover, #nav2:hover{
+    background-color: #d9d9d9;
+    color: black;
+}
+
+#burger{
+    width: 60px;
+    height: 60px;
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+}
+
+.menu.affichage{
+    margin-left: 0;
+}
+
+body.stopScroll{
+    overflow: hidden;
+} 
+
+
+
+
+/*Définition du corps de la page  */
+main
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 8%;
+}
+
+section
+{
+    width: 100%;
+    font-size: 2em;
+    text-align: center;
+}
+
+article
+{
+    background-color: #34BE63;
+    color: #F5F5F5;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+img
+{
+    border-radius: 30px;
+    width: 100%;
+    flex-shrink: 0.5;
+}
+
+#detail{
+    width: 8%;
+}
+
+.carte
+{
+    background-color: #d9d9d9;
+    width: 30%;
+    margin: 30px 3px;
+    color: black;
+    font-size: 1em;
+    align-items: center;
+    padding: 0;
+}
+
+#ligneCarte{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2
+{
+    background-color:#34BE63;
+    border-radius: 30px;
+    width: 90%;
+}
+
+#lienMinPop{
+    background-color: #34BE63;
+    color: #F5F5F5;
+    border-radius: 30px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+#lienMinPop img{
+    margin-bottom: 10px;
+}
+
+#ligneMinPop
+{
+    justify-content: space-between;
+}
+
+#lienAcces{
+    font-size: 1.5em;
+    background-color: #34BE63;
+    color: #F5F5F5;
+    border-radius: 30px;
+    width: 90%;
+    margin: 10px;
+    text-decoration: none;
+    align-items: center;
+}
+
+#lienAcces:hover{ 
+    color: #3d9660;
+    background-color: #F5F5F5;
+}
+
+#lienDetail{
+    font-size: 1.5em;
+    background-color: #34BE63;
+    color: #F5F5F5;
+    border-radius: 30px;
+    margin: 2em;
+    padding: 5px 4em;
+    text-decoration: none;
+}
+
+section+section{
+    margin-bottom: 150px;
+}
+
+section>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Définition du style du pied de page */ 
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3d9660;
+    color: #F5F5F5;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+#lienAsso{
+    color: #F5F5F5;
+    margin-left: 30%; 
+}
+
+#lienAsso:hover{
+    text-decoration: none;
+}
+
+#reseaux{
+    height: 4em;
+    width: 25em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#reseaux > a{
+    border-radius: 20px;
+}
+
+#reseaux > a:hover{
+    background-color: #F5F5F5;
+}
+
+
+
+
+/* Photo d'arrière plan du lien vers la galerie qui zoome au passage de la souris */
+#galeriefooter a p{
+    text-align: center;
+    text-decoration: none;
+    color: #F5F5F5;
+    width: 20em;
+    height: 3em;
+    padding-top: 2em;
+    background: url(../imgs/imgs_footer/kayak.jpg);
+    background-size: 100%;
+    background-position: 50% 25%;
+    transition: background-size 1s;
+} 
+
+/* Zoom de la photo au passage de la souris */
+#galeriefooter a p:hover{
+    background-size: 150%;
+} 
+
+
+#galeriefooter a{
+    text-decoration: none;
+}
+
+/* Responsivité */
+@media screen and (max-width : 1170px) {
+    /* point de rupture ligne carte */
+    #ligneCarte{
+        flex-direction: column;
+    }
+    #ligneMinPop{
+        justify-content: center;
+    }
+    .carte
+        {
+            width: 75%;
+            margin: 5%;
+        }
+    .carte > img{
+        flex-shrink: 1;
+    }
+    article{
+        margin: 50px;
+    }
+}
+    @media screen and (max-width : 1080px) {
+        /* point de rupture ligne MinPop */
+        #ligneMinPop{
+            flex-direction: column;
+        }
+    }
+    @media screen and (max-width : 850px)
+    {
+        /* Responsivité de l'entête */
+
+        /* Passage du logo de burger au premier plan */
+        #burger{
+            display: block;
+            z-index: 2;
+        }
+
+        /* Suppression du style du menu */
+        .menu ul li, .menu ul, .menu #nav2{
+            all: unset;
+        }
+
+        /* Redéfinition du style du menu */
+        header .menu{
+            z-index: 1;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(7px);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: -100%;
+            transition: all 1s ease;
+        }
+
+        header .menu ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            width: 100%;
+        }
+
+        header .menu ul li a{
+            width: 500px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin: 10px;
+        }
+        
+        header .menu ul li a:hover{
+            background-color: rgba(225, 225, 225, 0.5);
+            border-radius: 20px;
+        }
+
+        /* Responivité du contenu de la page */
+
+        main{
+            justify-content: flex-start;
+        }
+
+        section{
+            display: flex;
+            flex-direction: column;
+        }
+
+        article{
+            margin:1em;
+        }
+
+        /*Changement style h1*/
+        h1{
+            background-color: #F5F5F5;
+            color: black;
+            text-align: left;
+        }
+
+        /*point de rupture de la ligne Detail*/
+        #ligneDetail{
+            display: flex;
+            justify-content: center;
+        }
+        #lienDetail{
+            margin: 1em;
+            padding: 0 20%;
+        }
+        @media screen and (max-width : 585px) {
+            /*cache de l'image de detail*/
+            #detail{
+                display: none;
+            }
+        }
+
+        /* Suppression de l'image de la galerie et diminution de la taille des logos en dessous de 480px */
+        @media screen and (max-width : 480px) {
+            #galeriefooter a p{
+                background: none;
+            } 
+                
+            #reseaux > a img{
+                width: 75px;
+            }
+        }
+    }
