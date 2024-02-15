@@ -1,0 +1,217 @@
+#contenu {
+    background-color: var(--col4);
+    margin: auto;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    margin-top: 95px;
+    border-radius: 25px;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+#titre {
+    display: flex;
+    color: #000;
+    background-color: #fff;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;;
+}
+
+form {
+    margin: 20px;
+}
+
+form > div {
+    display: flex;
+    justify-content: center;
+}
+
+form > div > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.labelGrp {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5vh;
+    width: 80%;
+}
+
+input:not([type="file"]):not([type="checkbox"]), select {
+    width: 30vw;
+    height: 5vh;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    font-family: 'Noir Pro', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    padding-left: 5px;
+    margin-bottom: 6px;
+}
+
+#civiliteDateNaissance, #codePostalVille {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    align-items: end;
+}
+
+#civiliteDateNaissance > .labelGrp, #codePostalVille .labelGrp {
+    width: 40%;
+}
+
+#civiliteDateNaissance input, #civiliteDateNaissance select {
+    width: 100%;
+}
+
+#codePostalVille input {
+    width: 100%;
+}
+
+
+#civiliteDateNaissance .labelGrp + .labelGrp, #codePostalVille .labelGrp + .labelGrp {
+    margin-left: 5vw;
+}
+
+#civilite {
+    padding-left: 5px;
+    height: 5vh;
+}
+
+#infosCompte h2 {
+    color: white;
+}
+
+#validation {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    gap: 1em;
+}
+
+#validation div {
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+#validation button {
+    background-color: var(--col6);
+    min-width: 20vw;
+    width: fit-content;
+}
+
+#validation label {
+    margin: 0;
+}
+
+input[type='checkbox'] {
+    height: 3vh;
+    width: 3vw;
+    margin-right: 2vw;
+}
+
+/** Validation */
+
+#contenu > ul {
+    margin-left: 4vw;
+    color: white;
+    margin-bottom: 4vh;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+#photoProfil {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #fff;
+    color: #000;
+    border-radius: 50px;
+    height: 100px;
+    padding: .5em;
+    gap: 1em;
+    transition: all .3s ease-in-out;
+}
+
+#photoProfil:hover {
+    cursor: pointer;
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.75));
+}
+
+#photo{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+
+label > a{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 800px) {
+    form > div {
+        flex-direction: column;
+    }
+
+    #validation {
+        flex-direction: column-reverse;
+    }
+
+    form > div > div {
+        width: 100%;
+    }
+
+    input:not([type="file"]):not([type="checkbox"]), select {
+        width: 100%;
+    }
+
+    #civiliteDateNaissance, #codePostalVille {
+        flex-direction: column;
+        align-items: baseline;
+    }
+
+    #civiliteDateNaissance > .labelGrp, #codePostalVille .labelGrp {
+        width: auto;
+    }
+
+    #civiliteDateNaissance .labelGrp + .labelGrp, #codePostalVille .labelGrp + .labelGrp {
+        margin-left: 0;
+    }
+
+    #infosCompte h2 {
+        scale: 0.8;
+    }
+
+    #validation button {
+        width: 68vw;
+    }
+
+    #validation div {
+        margin-top: 2vh;
+    }
+
+    #contenu {
+        width: 85vw;
+    }
+
+
+}

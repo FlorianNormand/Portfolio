@@ -1,0 +1,466 @@
+/********************************************/
+/*Header*/
+
+#header {
+    background: #00000050;
+    backdrop-filter: blur(5px);
+    transition: all 0.5s ease;
+}
+
+#header nav ul li{
+    color: #fff;
+}
+
+#header.scrolled{
+    background-color: var(--col3);
+}
+
+#header.scrolled nav ul li{
+    color: var(--col1);
+}
+
+#header .logo{
+    content: url(/public/logos/logo-white.svg);
+    filter: drop-shadow(1px 1px 5px rgba(0, 0, 0, 0.75));
+}
+
+#header.scrolled .logo{
+    content: url(/public/logos/logo-grey.svg);
+    filter: none;
+}
+
+/*Compte*/
+#header .compte{
+    filter: drop-shadow(1px 0px 5px rgba(0, 0, 0, 0.55));
+    background-color: #00000050;
+}
+
+#header .compte:hover{
+    filter: none;
+    background-color: #000000A0;
+}
+
+#header .compte-options{
+    background-color: #000000A0;
+}
+
+#header .compte-options li:hover{
+    background-color: #000000F0;
+}
+
+#header.scrolled .compte{
+    filter: none;
+    background-color: var(--col1);
+}
+
+#header.scrolled .compte:hover{
+    filter: none;
+    background-color: #394142;
+}
+
+#header.scrolled .compte-options{
+    background-color: var(--col1);
+}
+
+#header.scrolled .compte-options li:hover{
+    background-color: #394142;
+}
+
+@media screen and (max-width: 900px){
+
+    #toggleBurger:checked ~ #header > nav > ul{
+        filter: drop-shadow(1px 0px 5px rgba(0, 0, 0, 0.55));
+        background-color: #00000050;
+    }
+
+    #toggleBurger:checked ~ #header.scrolled > nav > ul {
+        background-color: var(--col3);
+        filter: none;
+    }
+
+    #toggleBurger:checked ~ #header > nav > ul li:hover{
+        background-color: #00000050;
+        filter: none;
+    }
+
+    #toggleBurger:checked ~ #header.scrolled > nav > ul li:hover{
+        background-color: var(--col3);
+        filter: brightness(0.9);
+    }
+}
+
+/********************************************/
+/*Titre*/
+
+#titre{
+    display: block;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    position: absolute;
+    top: 33%;
+    left: 0;
+    z-index: 1;
+    transition: all 0.5s ease;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.75));
+}
+
+@media screen and (max-width: 760px) {
+    #titre{
+        font-size: auto;
+        line-height: normal;
+    }
+}
+
+/********************************************/
+/*Content*/
+
+#logements{
+    min-height: 100vh;
+    margin-bottom: calc(100vh - 200px);
+    background-color: #fff;
+}
+
+#logements #aucunLogementVisible{
+    display: none;
+    text-align: center;
+    margin-top: 2em;
+}
+
+#logements h2{
+    color: var(--col1);
+}
+
+#logements > h2{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--col1);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 1em;
+}
+
+#logements > nav{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 1em;
+    margin-right: 8em;
+}
+
+#logements > nav > a{
+    background-color: var(--col6);
+}
+
+/*Conteneur de "logement"*/
+#conteneur_logements{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2em;
+    min-height: inherit;
+    margin-left: 3em;
+}
+
+#contenur_logements a:hover{
+    filter: none;
+    border: none;
+}
+/*Une carte logement*/
+.logement{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: start;
+    position: relative;
+    width: 230px;
+    height: 360px;
+    max-height: fit-content;
+    background-color: #fff;
+    overflow: hidden;
+    border: 1px solid #000;
+    border-radius: 15px;
+    transition: all 0.5s ease;
+    scale: 1.1;
+    margin-right: 3em;
+    margin-bottom: 3em;
+}
+
+.logement > a{
+    display: block;
+    height: 50%;
+}
+
+.logement a:hover{
+    filter: none;
+    border: none;
+}
+
+.logement img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*Div contenant notation + like*/
+.logement > div{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000050;
+    backdrop-filter: blur(1px);
+}
+
+.logement > div > div{
+    margin-left: 5px;
+}
+
+.logement > div img{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.logement #rating{
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.logement #rating img {
+    margin-right: 8px;
+}
+
+.logement button{
+    background: none;
+    cursor: pointer;
+    border: none;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/*Informations d'un logement*/
+
+.logement #description{
+    display: block;
+    height: 50%;
+    width: 100%;
+}
+
+.logement #description div > * {
+    margin: 3px;
+}
+
+.logement #description > div{
+    display: block;
+    margin: 1em 1em 0em 1em;
+    height: calc(100% - 2em);
+    width: calc(100% - 2em);
+    word-wrap: break-word;
+    word-break:keep-all;
+}
+
+.logement a > div img{
+    height: 25px;
+    width: 25px;
+}
+
+.logement a > div > div{
+    display: flex;
+    gap: 5px;
+    align-items: baseline;
+}
+/*Prix*/
+.logement a > div > div+div{
+    padding-bottom: 5em;
+}
+.logement a > div > div+div+div{
+    position: absolute;
+    bottom: 0;
+    line-height: normal;
+    padding-bottom: .5em;
+}
+
+.logement strong{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--col5);
+}
+
+.logement:hover{
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.75));
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 760px) {
+    .logement{
+        scale: 1;
+    }
+}
+
+/*Options de filtre*/
+#options{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    height: 50px;
+}
+
+#options .boutton{
+    background-color: var(--col6);
+}
+
+#options > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: .5em;
+    height: 100%;
+    width: 100%;
+}
+
+/*Carte logements*/
+.map{
+    position: sticky;
+    top: 75px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: calc(100vh - 75px);
+    margin-top: 1em;
+    z-index: 3;
+    transition: all 0.5s ease;
+    transform: translate(100%, 100%);
+}
+
+.map > nav{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    flex-wrap: wrap;
+    left: 0;
+    bottom: 0;
+    z-index: 4;
+    width: 100%;
+}
+
+.map button.boutton{
+    display: block;
+    background-color: var(--col6);
+    padding: 1em;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.map button.boutton img{
+    width: 100%;
+    height: 100%;
+}
+
+.map button.boutton:first-child{
+    border-top-left-radius: 25px;
+}
+
+.map button.boutton:hover{
+    scale: 1.1;
+    transform: translate(-5%, -5%);
+    z-index: 5;
+}
+  
+.map > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 0;
+    border: none;
+}
+
+/********************************************/
+/*Bandeau des logements*/
+
+#logements .bandeau{
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#logements .bandeau .boutton{
+    display: block;
+    background-color: var(--col6);
+    padding: 1em;
+    border-radius: 0;
+    width: auto;
+    height: auto;
+    max-width: 100px;
+    max-height: 100px;
+    border-top-left-radius: 25px;
+}
+
+#logements .bandeau .boutton img{
+    background-color: var(--col6);
+    width: 100%;
+    height: 100%;
+}
+
+#logements .bandeau > .boutton:hover{
+    scale: 1.1;
+    transform: translate(-5%, -5%);
+}
+
+/*Menu de navigation*/
+#logements .bandeau > div{
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+}
+
+#logements .bandeau > div > .boutton{
+    border-radius: 0;
+}
+
+#logements .bandeau > div > .boutton:last-child{
+    border-top-right-radius: 25px;
+}
+
+#logements .bandeau > div > .boutton:hover{
+    transform: translate(0, -5%);
+    scale: 1.1;
+    z-index: 5;
+}
+
+#logements .bandeau > div .boutton:first-child img{
+    transform: rotate(-90deg);
+}
+
+#logements .bandeau > div .boutton:last-child img{
+    transform: rotate(90deg);
+}
