@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Pokémon V5</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Liste des Pokémon</h1>
+
+    <div id="filters">
+        <label for="generationFilter">Génération:</label>
+        <select id="generationFilter">
+            <option value="">Toutes</option>
+        </select>
+
+        <label for="typeFilter">Type:</label>
+        <select id="typeFilter">
+            <option value="">Tous</option>
+        </select>
+
+        <label for="nameFilter">Nom:</label>
+        <input type="text" id="nameFilter">
+    </div>
+
+    <table id="pokemonTable">
+        <thead>
+            <tr>
+                <th data-column="pokemon_id">ID</th>
+                <th data-column="pokemon_name">Nom</th>
+                <th data-column="generation">Génération</th>
+                <th data-column="types">Types</th>
+                <th data-column="base_attack">Points d'attaque de base</th>
+                <th data-column="base_defense">Points de défense de base</th>
+                <th data-column="base_stamina">Endurance (Stamina)</th>                
+                <th data-column="image">Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Les Pokémon seront ajoutés ici dynamiquement -->
+        </tbody>
+    </table>
+    
+
+    <div id="largeImageContainer"></div>
+
+    <div id="detailsPopup" style="display: none;">
+        <!-- Contenu des détails du Pokémon -->
+        <div class="pokemon-info">
+            <!-- Informations sur le Pokémon -->
+        </div>
+        <div class="pokemon-attacks">
+            <!-- Attaques du Pokémon -->
+        </div>
+        <div class="pokemon-image">
+            <!-- Image du Pokémon -->
+        </div>
+        <span id="closePopup" class="closePopup">×</span>
+    </div>
+
+    <button id="prevButton">PRÉC</button>
+    <button id="nextButton">SUIV</button>
+    <p id="pageIndicator"></p>
+
+    <script src="../data/pokemon_type.js"></script>
+    <script src="../data/generation.js"></script>
+    <script src="../data/pokemon.js"></script>
+    <script src="../data/charged_moves.js"></script>
+    <script src="../data/class_attack.js"></script>
+    <script src="../data/fast_moves.js"></script>
+    <script src="../data/class_type.js"></script>
+    <script src="../data/cp_multiplier.js"></script>
+    <script src="../data/pokemon_moves.js"></script>
+    <script src="../data/type_effectiveness.js"></script>
+    <script src="script_v5.js"></script>
+</body>
+</html>

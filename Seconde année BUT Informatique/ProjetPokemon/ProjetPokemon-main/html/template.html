@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Pokémon</title>
+    <style>
+        body{
+            background: linear-gradient(rgb(50, 105, 206), rgb(240, 215, 77));
+       
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 5px solid #ffffff;
+        }
+        th {
+            background-color: #ffffff;
+        }
+        img {
+            max-height: 100px;
+            max-width: auto;
+        }
+        h1{
+            font-size: 64px;
+            text-shadow: -1px -1px rgb(255, 255, 255), 1px 1px rgb(125, 128, 125);
+            font-family:Arial, Helvetica, sans-serif;
+            color: rgb(26, 27, 26);
+            padding:16px;
+            font-weight:lighter;  
+            text-align:center;
+            display:block;
+            margin:16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokémon Template</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Identifiant unique</th>
+                <th>Nom</th>
+                <th>Génération</th>
+                <th>Types</th>
+                <th>Endurance (Stamina)</th>
+                <th>Points d'attaque de base</th>
+                <th>Points de défense de base</th>
+                <th>Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td> <!-- Identifiant unique -->
+                <td>Bulbasaur</td> <!-- Nom -->
+                <td>1</td> <!-- Génération -->
+                <td>Grass, Poison</td> <!-- Types -->
+                <td>90</td> <!-- Endurance (Stamina) -->
+                <td>118</td> <!-- Points d'attaque de base -->
+                <td>118</td> <!-- Points de défense de base -->
+                <td><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="Bulbasaur"></td> <!-- Image -->
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,145 @@
+
+
+body {
+    background: rgb(31,205,249);
+    background: radial-gradient(circle, rgba(31,205,249,1) 0%, rgba(255,255,95,1) 100%);
+    height: 100vh; 
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 18px;
+    text-align: left;   
+    border-bottom: 5px solid #ffffff;
+}
+tbody{
+    background-color: rgb(172, 246, 252);
+}
+th {
+    background-color: #ffffff;
+}
+img {
+    max-height: 100px;
+    max-width: auto;
+}
+h1 {
+    font-size: 64px;
+    text-shadow: -1px -1px rgb(255, 255, 255), 1px 1px rgb(241, 222, 44);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(26, 27, 26);
+    padding: 16px;
+    font-weight: lighter;
+    text-align: center;
+    display: block;
+    margin: 16px;
+}
+
+
+         
+#prevButton, #nextButton {
+    background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+    display:flex;
+  }
+
+  #prevButton:hover, #nextButton:hover{
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
+  }
+ 
+
+#pageIndicator {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+#detailsPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 3vw; 
+    border-radius: 2vw; 
+    box-shadow: 0 0 2vw rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    height: 60vh; 
+}
+
+#detailsPopup h2, #detailsPopup p, #detailsPopup ul {
+    margin: 0;
+    font-size: 0.6em;
+}
+
+#detailsPopup h2{
+    font-size: 1.5em;
+    text-align: center;
+
+}
+
+#detailsPopup .pokemon-info {
+    flex: 1;
+    overflow-y: auto; 
+}
+
+#detailsPopup .pokemon-attacks {
+    flex: 1;
+    overflow-y: auto; 
+}
+
+#detailsPopup img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    flex: 1; 
+}
+
+.closePopup {
+    position: absolute;
+    top: 1vw; 
+    right: 1vw; 
+    font-size: 2vw; 
+    cursor: pointer;
+}
+
+
+#largeImageContainer {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1000; 
+    display: none; 
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 80%; 
+    max-height: 80%; 
+    overflow: auto; /
+}
+
+
+
+#largeImageContainer img {
+    display: block; 
+    margin: 0 auto; 
+    max-height: max-content;
+    max-width: auto;
+}
+
